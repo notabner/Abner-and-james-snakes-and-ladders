@@ -77,7 +77,7 @@ while True:
           
           # Check for ladders
     if p1 in ladders:
-      p1 = ladders[p1]
+      p1 = p1 + random.randint(1,10)
       print("You climbed a ladder! P1 is now on", p1)
       print("Player 1 is on", p1)
       
@@ -94,7 +94,7 @@ while True:
           
           # Check for ladders
     if p2 in ladders:
-      p2 = ladders[p2]
+      p2 = p2 + random.randint(1,10)
       print("You climbed a ladder! P2 is now on", p2)
       print("Player 2 is on", p2)
   
