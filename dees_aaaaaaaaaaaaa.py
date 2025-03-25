@@ -69,35 +69,37 @@ while True:
       turn = turn + 1
       print("Player 1 rolled", p1d)
       p1 = p1 + p1d
-          
+      print("player 1 is on", p1)
+      input("Press enter to roll")
       # Check for snakes
-    if p1 in snakes:
-      p1 = p1 - random.randint(1, 10)
-      print("Haha loser, you hit a snake! P1 is now on", p1)
-          
-          # Check for ladders
-    if p1 in ladders:
-      p1 = p1 + random.randint(1,10)
-      print("You climbed a ladder! P1 is now on", p1)
-      print("Player 1 is on", p1)
-      
+      if p1 in snakes:
+        p1 = p1 - random.randint(1, 10)
+        print("Haha loser, you hit a snake! P1 is now on", p1)
+        input("Press enter to roll")
+            # Check for ladders
+      if p1 in ladders:
+        p1 = p1 + random.randint(1,10)
+        print("You climbed a ladder! P1 is now on", p1)
+        print("Player 1 is on", p1)
+        input("Press enter to roll")
     elif turn == 1:
       p2d = dice_rollp2(p2d)
       turn = turn - 1
       print("Player 2 rolled", p2d)
       p2 = p2 + p2d
-          
+      print("player2 is now on", p2)
+      input("Press enter to roll")
   # Check for snakes
-    if p2 in snakes:
-      p2 = p2 - random.randint(1, 10)
-      print("Haha loser, you hit a snake! P2 is now on", p2)
-          
-          # Check for ladders
-    if p2 in ladders:
-      p2 = p2 + random.randint(1,10)
-      print("You climbed a ladder! P2 is now on", p2)
-      print("Player 2 is on", p2)
-  
-    input("Press enter to roll")
+      if p2 in snakes:
+        p2 = p2 - random.randint(1, 10)
+        print("Haha loser, you hit a snake! P2 is now on", p2)
+        input("Press enter to roll")
+            # Check for ladders
+      if p2 in ladders:
+        p2 = p2 + random.randint(1,10)
+        print("You climbed a ladder! P2 is now on", p2)
+        print("Player 2 is on", p2)
+        input("Press enter to roll")
+    
     os.system('clear')
     printTable()
